@@ -126,3 +126,11 @@ body {
   font-size: 18px;
 }
 /*Fin de Menù lateral*/
+
+
+
+@media screen and (max-width: 768px) {
+  .container .menu a {
+    font-size: 12px;
+  }
+}
