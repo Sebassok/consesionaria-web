@@ -134,3 +134,104 @@ body {
     font-size: 12px;
   }
 }
+
+
+
+
+
+
+
+/* catalogo*/
+
+
+
+/* Contenedor del catálogo */
+.catalogo-container {
+  display: flex;
+  max-width: 1200px;
+  margin: 120px auto 50px; /* deja espacio para el header */
+  gap: 20px;
+}
+
+/* Filtros */
+.filtros {
+  width: 250px;
+  background: rgba(255, 255, 255, 0.4); /* 50% de opacidad */
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.filtros h2 {
+  margin-bottom: 10px;
+}
+
+.filtros label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+/* Listado de autos */
+.listado-autos {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+/* Tarjetas de autos */
+.tarjeta-auto {
+  background: rgba(255, 255, 255, 0.4); /* 50% de opacidad */
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.tarjeta-auto:hover {
+  transform: scale(1.05);
+}
+
+.tarjeta-auto img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.tarjeta-auto h3 {
+  margin: 10px 0 5px;
+}
+
+.tarjeta-auto p {
+  margin-bottom: 10px;
+}
+
+.tarjeta-auto button {
+  padding: 8px 15px;
+  border: none;
+  background: #1c1c1c;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.tarjeta-auto button:hover {
+  background: #333;
+}
+
+/* Media query para móviles */
+@media screen and (max-width: 768px) {
+  .catalogo-container {
+    flex-direction: column;
+    margin: 120px 20px 50px;
+  }
+
+  .filtros {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .listado-autos {
+    grid-template-columns: 1fr;
+  }
+}
